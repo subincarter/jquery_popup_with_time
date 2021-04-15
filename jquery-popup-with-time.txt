@@ -1,0 +1,74 @@
+<!-- popup -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $(document).ready(function() {
+        setTimeout(function() {
+    // lastFocus = document.activeElement;
+    $("#myModal").modal('show');
+    displayPopup();
+        }, 5000);
+    });
+    </script>
+    <!-- popup -->
+<!-- popup form starts -->
+                <div id="myModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header" style="background-color: red;">
+                                <h2 class="contact-title">Get in Touch</h2>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form" action="" method="post" id="">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <span style="color:red">*</span><input class="form-control valid"
+                                                    name="name" id="name" type="text" placeholder="Enter your name"
+                                                    required minlength="6" maxlength="20">
+                                                <span class="error"><?php echo $nameerr; ?></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <span style="color:red">*</span><input class="form-control valid"
+                                                    name="email" id="email" type="email"
+                                                    placeholder="Email : example@gmail.com" pattern=".+@gmail.com"
+                                                    required>
+                                                <span class="error"><?php echo $emailerr; ?></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <span style="color:red">*</span><input class="form-control"
+                                                    name="number" id="number" type="number"
+                                                    placeholder="Enter Contact Number" required>
+                                                <span class="error"><?php echo $contactnoerr; ?></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input class="form-control" name="subject" id="subject" type="text"
+                                                    placeholder="Enter Subject" style="margin-top:24px">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <textarea class="form-control" name="message" id="message" cols="25"
+                                                    rows="4" placeholder=" Enter Message"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <button type="submit" class="button button-contactForm boxed-btn" style="border-radius: 26px 0px;
+                                font-size: 12px;" name="submit">Send</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- popup ends -->
